@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%extends 'index.html' %}
+{%load static%}
+
+{%block body_block%}
+
+
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <h2 class="page-section-heading text-center text-uppercase text-white"></h2>
+     <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+ <div class="container">
+    <div class="row">
+
+
+            <table>
+                {%for job in jobs%}
+                <tr>
+                    <td><li><a href="{%url 'detail' pk=job.id %}" style="color:white;" >
+                        {{job.job_role}}</a>,{{job.company_name}}</li></td>
+
+                </tr>
+                {%endfor%}
+
+            </table>
+
+
+        </div>
+
+    </div>
+ </div>
+</section>
+
+ {% endblock %}

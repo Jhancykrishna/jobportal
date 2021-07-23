@@ -1,0 +1,27 @@
+
+
+{%extends 'index.html' %}
+{%load static%}
+
+{%block body_block%}
+
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <h2 class="page-section-heading text-center text-uppercase text-white"></h2>
+     <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+    <div class="col-4"></div>
+        <div class="col-4">
+            <form action="" method="post">
+                {%csrf_token%}
+                {{form.as_p}}
+                <input type="submit" value="Register" style="margin-left:140px;">
+                <a href="{%url 'jslist'%}" style="color:white">View Jobs</a>
+            </form>
+        </div>
+    <div class="col-4"></div>
+
+</section>
+ {% endblock %}

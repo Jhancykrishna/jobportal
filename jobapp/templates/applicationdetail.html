@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{%extends 'index.html' %}
+{%load static%}
+
+{%block body_block%}
+
+
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <h2 class="page-section-heading text-center text-uppercase text-white"></h2>
+     <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"></div>
+                    <div class="divider-custom-line"></div>
+     </div>
+
+ <div class="container">
+    <div class="row">
+</head>
+
+<div class="col-3">
+    <p>Job Role:{{app.job.job_role}}<br/>
+        Applicant name:<a href="{%url 'info' pk=app.pk %}" style="color:white;">{{app.job_seeker}}<br/></p>
+
+</div>
+
+
+</html>
+
+</section>
+
+ {% endblock %}

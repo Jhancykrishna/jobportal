@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%extends 'index.html' %}
+{%load static%}
+
+{%block body_block%}
+
+
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <h2 class="page-section-heading text-center text-uppercase text-white"></h2>
+     <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+ <div class="container">
+    <div class="row">
+
+            <table>
+                <div class="col-3">
+                {%for app in apps%}
+                <tr>
+                    <td><p><li><b>Applicant:{{app.job_seeker}}</b><br/>
+                        Jobrole:{{app.job.job_role}}</li></p></td>
+                </div>
+                 <div class="col-3">
+                    <td><a href="{%url 'appdetail' pk=app.id %}" style="color:white;"><button>View</button></td>
+                    <td><input type="submit" value="accept"></td>
+                    <td><input type="submit" value="reject"></td>
+
+                </div>
+                </tr>
+                {%endfor%}
+
+            </table>
+
+    </div>
+ </div>
+</section>
+
+ {% endblock %}
